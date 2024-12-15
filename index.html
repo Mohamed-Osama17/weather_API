@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/stylesheet.css">
+</head>
+
+<body>
+    <!--*====================Navbar-Start====================-->
+    <nav id="navbar-example" class="navbar navbar-expand-lg main-bg p-5">
+        <div class="container">
+            <a class="branding d-flex justify-content-center align-items-center" href="#home">
+                <img src="images/logo.png" alt="logo" class="logo figure-img">
+                <div class="logo-type">
+                    <h1 class="site-title">Weather</h1>
+                    <small class="site-description">tagline goes here</small>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a id="home" class="nav-link navLink active" aria-current="page" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link navLink" href="#news">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link navLink" href="#live-cameras">Live Cameras</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link navLink" href="#photos">Photos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="contact" class="nav-link navLink" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--*====================Navbar-End====================-->
+    <!--*====================Home-Start====================-->
+    <section id="home" class="home main-bg pb-5">
+        <div class="container py-5">
+            <form class="find-location">
+                <input 
+                id="search" 
+                type="text" 
+                class="form-control w-100 mx-auto border-0 main-bg"
+                placeholder="Find your location ....">
+                <button 
+                type="button" 
+                class="find-btn secondary-bg"
+                >Find
+                </button>
+            </form>
+        </div>
+        <div class="row g-0 mx-5 ">
+            <!--*====================Today-Section====================-->
+            <div class="col-lg-4">
+                <div class="card w-100 h-100 mb-3  bg-transparent">
+                    <div id="todayDate" class="card-header item d-flex justify-content-between card-text-color card-body-bg">
+                        <p id="dayName" class="my-auto"></p>
+                        <span>
+                            <span id="dayNumber" class="my-auto">14</span>
+                            <span id="todayMonthCity" class="my-auto">December</span>
+                            <span id="year" class="my-auto"></span>
+                        </span>
+                    </div>
+                    <div id="today" class="card-1 card-body item px-3 py-3 pt-5">
+                        <p id="todayLocation" class="card-title fs-5 card-text-color"></p>
+                        <div class="d-flex flex-wrap justify-content-between align-items-center">
+                            <span class="fw-bolder">
+                                <span 
+                                id="todayTemperature" 
+                                class="todayDegree text-white">18.3
+                                <sup>o</sup>C
+                                </span>
+                            </span>
+                            <img id="todayConditionImg" src="images/116.webp" alt="Weather Image" />
+                        </div>
+                        <p id="todayText" class="fs-6 secondry-color">Sunny</p>
+                        <div class="item d-flex text-light p-3 card-text-color">
+                            <div class="d-flex justify-content-center align-items-center me-3">
+                                <img src="images/icon-umberella.png" class="footer-icon mt-3 me-2"
+                                    alt="weather-img">
+                                <span id="todayHumidity" class="pt-3">20%</span>
+                            </div>
+                            <div class=" d-flex justify-content-center align-items-center me-3">
+                                <img src="images/icon-wind.png" class="footer-icons mt-3 me-2"
+                                    alt="weather-img">
+                                <span id="todayWind" class="pt-3">18km/h</span>
+                            </div>
+                            <div class="d-flex justify-content-center align-items-center">
+                                <img src="images/icon-compass.png" class="footer-icons mt-3 me-2 "
+                                    alt="weather-img">
+                                <span id="todayCompass" class="pt-3">East</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card w-100 h-100 mb-3 bg-transparent">
+                    <div id="tomorrowDate" class="card-header item d-flex justify-content-center card-text-color middle-card-bg">
+                        <p id="tomorrowdayName" class="my-auto">saturday</p>
+                    </div>
+                    <div id="today" class="card-2 card-body item px-3 py-3 pt-5">
+                        <div class="d-flex flex-column justify-content-between align-items-center">
+                            <img id="tomorrowConditionImg" src="images/116.webp" alt="Weather Image" />
+                            <span class="fs-1 fw-bolder d-flex flex-column justify-content-center">
+                                <span 
+                                    id="tomorrowMaxTemp" 
+                                    class="text-white fs-4">
+                                    18.3<sup>o</sup>C
+                                </span>
+                            </span>
+                        </div>
+                        <small class=" minTemp text-center card-text-color fs-6 d-block">11.9<sup>o</sup></small>
+                        <p id="tomorrowText" class="fs-6 secondry-color text-center pt-3">Sunny</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card w-100 h-100 mb-3 bg-transparent">
+                    <div id="overmorrowDate" class="card-header item d-flex justify-content-center card-text-color card-body-bg">
+                        <p id="overmorrowName" class="my-auto">saturday</p>
+                    </div>
+                    <div id="overmorrow" class="card-3 card-body item px-3 py-3 pt-5">
+                        <div class="d-flex flex-column justify-content-between align-items-center">
+                            <img id="overmorrowConditionImg" src="images/116.webp" alt="Weather Image" />
+                            <span class="fs-1 fw-bolder d-flex flex-column justify-content-center">
+                                <span 
+                                    id="overmorrowMaxTemp" 
+                                    class="text-white fs-4">
+                                    18.3<sup>o</sup>C
+                                </span>
+                            </span>
+                        </div>
+                        <small class="overmorrowMinTemp text-center card-text-color fs-6 d-block">11.9<sup>o</sup></small>
+                        <p id="overmorrowText" class="fs-6 secondry-color text-center pt-3">Sunny</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="form-container">
+                        <form class="subscribe-form">
+                            <input id="search" type="text" class="form-control w-100 mx-auto border-0 main-bg"
+                                placeholder="Enter your email to subscribe ....">
+                            <button type="button" class="subscribe-btn secondary-bg">subscribe</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="container-social-links">
+                        <div class="social-links">
+                            <a href=""><i class="fa-brands fa-facebook-f fa-circle fa-2x"></i></a>
+                            <a href=""><i class="fa-brands fa-twitter fa-circle fa-2x"></i></a>
+                            <a href=""><i class="fa-brands fa-google-plus-g fa-circle fa-2x"></i></a>
+                            <a href=""><i class="fa-brands fa-pinterest-p fa-circle fa-2x"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="copyright">Copyright 2014 Company name. Designed by Themezy. All rights reserved</p>
+        </div>
+    </footer>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
